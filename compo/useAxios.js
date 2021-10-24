@@ -10,6 +10,8 @@ const getNew = async () => {
             'Content-Type': 'application/json',
         }
     })
+
+    return responsive;
 }
 
 const useAxios = () =>{
@@ -19,7 +21,7 @@ const useAxios = () =>{
     useEffect( () => {
         getNew().then( res => { setData(res.data) });
     }, [])
-
+    console.log(data);
     return data;
 }
 
